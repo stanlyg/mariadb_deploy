@@ -23,6 +23,7 @@ semanage fcontext -a -t mysqld_var_run_t "/data/mariadb/mariadb\.sock"
 semanage fcontext -a -t mysqld_db_t      "/data/mariadb-binlogs(/.*)?"
 semanage fcontext -a -t mysqld_tmp_t     "/data/mariadb-tmp(/.*)?"
 #semanage fcontext -a -t mysqld_log_t "/var/log/mariadb(/.*)?"
+semanage port -a -t mysqld_port_t -p tcp 3307
 
 restorecon -Rv /data/mariadb
 restorecon -Rv /data/mariadb-binlogs

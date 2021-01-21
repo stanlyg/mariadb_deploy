@@ -37,4 +37,5 @@ long-query-time                 = 10
 log-error=/var/log/mariadb/mariadb.log
 pid-file=/var/run/mariadb/mariadb.pid
 
-
+[client]
+socket           = /data/mariadb/mariadb.sock
